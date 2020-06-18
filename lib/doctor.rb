@@ -20,7 +20,7 @@ class Doctor
     Appointment.all.select { |appointment| appointment.doctor == self }
   end
 
-  def patients 
-   Patient.new(name)
+  def patients
+    Appointment.all.map {|patients| patients.doctor == self}
   end
 end
